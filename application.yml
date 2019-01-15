@@ -1,0 +1,31 @@
+server:
+  port: 8765
+
+spring:
+  application:
+    name: Consumer
+
+  #热部署
+  devtools:
+    restart:
+      enabled: true
+      trigger-file: devtools.tg
+
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.100:7788/eureka/
+  instance:
+    prefer-ip-address: true
+
+#熔断器开启
+      feign:
+        hystrix:
+          enabled: true
