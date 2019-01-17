@@ -5,10 +5,6 @@ spring:
   application:
     name: Consumer
 
-  devtools:
-    restart:
-      enabled: true
-      trigger-file: devtools.tg
 
 
   thymeleaf:
@@ -23,7 +19,3 @@ eureka:
       defaultZone: http://192.168.43.181:7788/eureka/
   instance:
     prefer-ip-address: true
-
-      feign:
-        hystrix:
-          enabled: true
