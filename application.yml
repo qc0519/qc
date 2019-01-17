@@ -5,7 +5,6 @@ spring:
   application:
     name: Consumer
 
-  #热部署
   devtools:
     restart:
       enabled: true
@@ -25,7 +24,6 @@ eureka:
   instance:
     prefer-ip-address: true
 
-#熔断器开启
       feign:
         hystrix:
           enabled: true
